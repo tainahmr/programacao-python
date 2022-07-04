@@ -117,7 +117,7 @@ salario_bruto = valor_hora*hora_trabalhada
 ir = salario_bruto*0.11
 inss = salario_bruto*0.08
 sind = salario_bruto*0.05
-salario_liq = salario_bruto - ir - inss - sind
+salario_liq = salario_bruto - ir  - inss - sind
 
 print('O salário bruto é R$', salario_bruto, ',foi pago de INSS R$', inss, ', foi pago ao Sindicato R$', sind,'. Com os descontos, o salário liquido é de R$', salario_liq)
 

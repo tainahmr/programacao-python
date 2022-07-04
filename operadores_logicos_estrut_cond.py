@@ -104,5 +104,69 @@ print(f'A entrada será R${valor}')
 
 #imprimir uma mensagem informando se um aluno foi aprovado ou reprovado em uma disciplina 
 #com base em sua nota final. A nota mínima necessária para aprovação é 5 .  
-  
+nota = float(input('informe sua nota: '))
 
+if nota < 5:
+  print('Aluno não aprovado.')
+
+else:
+  print('Aluno aprovado.')
+  
+#Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+#a. Álcool: até 20 litros, desconto de 3% por litro acima de 20 litros, 
+#desconto de 5% por litro; b. Gasolina: até 20 litros, desconto de 4% por litro
+#acima de 20 litros, desconto de 6% por litro. Escreva um algoritmo que leia o 
+#número de litros vendidos, o tipo de combustível (codificado da seguinte forma: 
+#A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se 
+#que o preço do litro da gasolina é 2.50 o preço do litro do álcool é 1,90.
+combustivel = input('Informe A-álcool ou G-gasolina. ')
+litros = float(input('Informe os litros: '))
+
+if combustivel =='A' and litros <20:
+  valor = float(2.50*0.96*litros)
+  print('O total pago é R$', valor)
+
+elif combustivel =='A' and litros >=20:
+  valor = float(2.50*0.95*litros)
+  print('O total pago é R$', valor)
+
+elif combustivel =='G' and litros <20:
+  valor = float(1.90*0.96*litros)
+  print('O total pago é R$', valor)
+
+elif combustivel =='G' and litros >=20:
+  valor = float(1.90*0.94*litros)
+  print('O total pago é R$', valor)
+  
+#Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja 
+#realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+#a. par ou ímpar; b. positivo ou negativo; c. inteiro ou decimal.
+num = float(input('Informe um número: '))
+num2 = float(input('Informe um segundo número: '))
+op = input('Qual operação deseja realizar (soma, sub, multi, divisão): ')
+
+if op == 'soma':
+  result = num + num2
+
+elif op == 'sub':
+  result = num - num2
+
+elif op == 'multi':
+  result = num*num2
+
+elif op == 'divisao':
+  result = num / num2
+
+escolha = input("\nDigite uma das opções a seguir (a, b, ou c): "
+                "\n a. par ou ímpar;"
+                "\n b. positivo ou negativo;"
+                "\n c. inteiro ou decimal. \n")
+if escolha == 'a':
+  print(f"\n{result} é par") if result%2 == 0 else print(f"\n{result} é ímpar")
+elif escolha == 'b':
+  print(f"\n{result} é positivo") if result%2 == 0 else print(f"\n{result} é negativo")
+elif escolha == 'c':
+  print(f"\n{int(result)} é inteiro") if int(result) == result else print(f"\n{result} é decimal")
+else:
+  print("Valor inválido!")
+  
